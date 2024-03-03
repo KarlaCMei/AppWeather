@@ -1,10 +1,11 @@
 package com.karla.appweather.data.repository
 
 import com.karla.weatherapp.model.WeatherResponse
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class WeatherProvider {
-    companion object {
+@Singleton
+class WeatherProvider @Inject constructor(){
         var quote: WeatherResponse? = null
-    }
 
 }

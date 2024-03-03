@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -60,4 +62,12 @@ dependencies {
 
     implementation ("androidx.activity:activity-ktx:1.7.2")
 
+    //Librerias para la inyeccion de dependencias
+    implementation("com.google.dagger:hilt-android:2.49")
+    kapt("com.google.dagger:hilt-android-compiler:2.49")
+
+}
+
+kapt {
+    correctErrorTypes = true
 }
